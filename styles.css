@@ -10,21 +10,28 @@ body {
     overflow-x: hidden;
 }
 
-
 header {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 50;
-    height: 100px;
+    height: 70px; 
+    padding: 10px 0;
 }
 
+header h1 {
+    font-size: 20px; 
+    margin: 5px 0;
+}
 
+header p {
+    font-size: 14px;
+    margin: 0;
+}
 
 main {
     background: url('pexels-davidmcbee-1546168.jpg') no-repeat center center/cover;
@@ -34,8 +41,8 @@ main {
     justify-content: center;
     padding: 20px;
     width: 100%;
+    flex-direction: column;
 }
-
 
 .grid-container { 
     display: grid;
@@ -45,18 +52,53 @@ main {
     margin: 20px auto;
     padding: 20px;
     text-align: center;
-    height: 500px;
+    height: 200px;
 }
-
 
 .grid-item {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px black;
     border-radius: 5px;
     font-weight: bold;
+    font-size: 30px;
+    color: #003366;
 }
 
+.lead-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.lead-form h2 {
+    color: #003366;
+}
+
+.lead-form input, .lead-form button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.lead-form button {
+    background-color: #003366;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.lead-form button:hover {
+    background-color: #002244;
+}
 
 footer {
     background-color: #003366;
@@ -67,6 +109,7 @@ footer {
     width: 100%;
     margin-top: auto; 
 }
+
 @media (max-width: 900px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
@@ -79,6 +122,11 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         width: 95%;
     }
+
+    main {
+        padding: 10px;
+    }
+}
 
     main {
         padding: 10px;
